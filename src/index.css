@@ -13,6 +13,7 @@
 @layer components{
     body{
         font-family: "Inter",sans-serif;
+        color:#333;
     }
     div ul li{
         font-size: 1.2rem;
@@ -48,5 +49,18 @@
         background-image:url(/noisy.png);
        
     }
-    
+    .about{
+        background-color: #fbf6e2;
+            background-image: url(/noisy.png);
+    }
+    .project{
+            background-color: #fbf6e2;
+                background-image: url(/noisy.png);
+    }
+
+    .contact{
+      background-color: #fbf6e2;
+        background-image: url(/noisy.png);
+        overflow: hidden;
+    }
 }

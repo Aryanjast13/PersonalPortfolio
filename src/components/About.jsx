@@ -13,7 +13,7 @@ const About = ({ scrollRef }) => {
   return (
     <section
       ref={scrollRef}
-      className="w-full h-screen bg-background-main px-12"
+      className="about w-full pb-40  px-12"
     >
       <h2 className="text-7xl py-6">About Me</h2>
       <div className="flex mt-16 ">

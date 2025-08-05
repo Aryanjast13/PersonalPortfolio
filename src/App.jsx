@@ -11,8 +11,8 @@ function App() {
 	
 
   const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
 	const contactRef = useRef(null);
+  const projectsRef = useRef(null);
 	
 	const scrollToSection = (ref) => {
 		ref.current.scrollIntoView({ behavior: "smooth" });
@@ -25,9 +25,9 @@ function App() {
         onScrollToProjects={() => scrollToSection(projectsRef)}
         onScrollToContact={() => scrollToSection(contactRef)}
       />
-      <About scrollRef={aboutRef} />
+      <About scrollRef={aboutRef} /> 
       <Project scrollRef={projectsRef} />
-      <Contact scrollRef={contactRef} />
+      <Contact scrollRef={contactRef} /> 
     </>
   );
 }
