@@ -16,12 +16,12 @@ const ProjectCard = ({project}) => {
             ))}
           </ul>
           <div className="flex gap-4 mt-4">
-            <a href={project.github_link}>
+            <a href={project.github_link} target="_blank">
               <button className="text-sm border px-4 rounded-md py-1">
                 github
               </button>
             </a>
-            <a href={project.live_link}>
+            <a href={project.live_link} target="_blank">
               <button className="text-sm border px-4  text-black rounded-md py-1">
                 Link
               </button>
@@ -30,7 +30,11 @@ const ProjectCard = ({project}) => {
         </div>
       </div>
       <div className="w-[45%] bg-blue-500 h-[25rem] rounded overflow-hidden ">
-        <img src={project.image.url} alt={project.image.altText} className="w-full h-full object-cover" />
+        <img
+          src={project.image.url}
+          alt={project.image.altText}
+          className="w-full h-full object-cover"
+        />
       </div>
     </div>
   );
