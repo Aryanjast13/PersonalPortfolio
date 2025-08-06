@@ -1,11 +1,11 @@
 const ProjectCard = ({project}) => {
   return (
-    <div className="flex  justify-between mb-16 bg-[#eee8d9] rounded-lg">
-      <div className="w-[50%] flex flex-col justify-between pl-4 ">
-        <h4 className="text-3xl mt-4">{project.title}</h4>
+    <div className="flex flex-col md:flex-row justify-between mb-16 bg-[#eee8d9] rounded-lg">
+      <div className="w-full md:w-[50%] flex flex-col justify-between pl-4 pb-5 md:pb-0">
+        <h4 className="text-3xl mb-2 md:mb-0 mt-4">{project.title}</h4>
         <div className=" mb-10">
-          <p className="text-xl">{project.description}</p>
-          <ul className="mt-4 flex gap-2">
+          <p className=" text-lg leading-6  md:text-xl">{project.description}</p>
+          <ul className="mt-4 flex gap-2 flex-wrap ">
             {project.tools.map((tool) => (
               <li
                 key={tool.id}
@@ -29,11 +29,11 @@ const ProjectCard = ({project}) => {
           </div>
         </div>
       </div>
-      <div className="w-[45%] bg-blue-500 h-[25rem] rounded overflow-hidden ">
+      <div className="w-full relative md:w-[45%]  h-[25rem] rounded overflow-hidden">
         <img
           src={project.image.url}
           alt={project.image.altText}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover   "
         />
       </div>
     </div>

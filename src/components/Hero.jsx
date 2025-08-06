@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 const Hero = ({ onScrollToAbout, onScrollToProjects, onScrollToContact }) => {
   return (
-    <div className="hero  relative w-full h-screen border border-transparent">
+    <div className="hero  relative w-full md:h-screen border border-transparent">
   
       <NavBar
         scrollToAbout={onScrollToAbout}

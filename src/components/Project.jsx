@@ -89,10 +89,10 @@ const Project = ({ scrollRef }) => {
   return (
     <div
       ref={scrollRef}
-      className="project w-full border py-6 border-transparent px-12"
+      className="project w-full border py-6 border-transparent px-4 md:px-12"
     >
       <div>
-        <h2 className="text-5xl italic mb-20">Personal Projects</h2>
+        <h2 className="text-4xl md:text-5xl italic mb-10 md:mb-20">Personal Projects</h2>
         {
           projects.map((project) => (
             <ProjectCard key={project._id} project={project}  />
