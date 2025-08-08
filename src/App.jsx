@@ -32,20 +32,18 @@ function App() {
     if (!container) return;
 
     // create tweened setters once
-    const setX = gsap.quickTo(cursor, "x", { duration: 0.4, ease: "back.out" });
-    const setY = gsap.quickTo(cursor, "y", { duration: 0.4, ease: "back.out" });
+    const setX = gsap.quickTo(cursor, "x", { duration: 0.3, ease: "back.out" });
+    const setY = gsap.quickTo(cursor, "y", { duration: 0.3,  ease: "back.out" });
    
-       const onMove = (e) => {
-         setX(e.clientX);
-         setY(e.clientY);
-       };
+    const onMove = (e) => {
+      setX(e.clientX);
+      setY(e.clientY);
+    };
    
     container.addEventListener("mousemove", onMove);
 
- 
-
     return () => container.removeEventListener("mousemove", onMove);
-  },[])
+  }, []);
 
   
 
@@ -53,7 +51,7 @@ function App() {
 	return (
     <>
       <div ref={containerRef} >
-        <div ref={cursorRef}  className="cursor pointer-events-none fixed w-10 h-10 bg-black/80 z-50 rounded-full"></div>
+        <div ref={cursorRef}  className="cursor  pointer-events-none fixed origin-center transform -translate-x-1/2 -translate-y-1/2  w-10 h-10 bg-black/80 z-50 rounded-full"></div>
         <Hero
           onScrollToAbout={() => scrollToSection(aboutRef)}
           onScrollToProjects={() => scrollToSection(projectsRef)}

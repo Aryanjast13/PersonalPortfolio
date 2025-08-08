@@ -92,13 +92,12 @@ const Project = ({ scrollRef }) => {
       className="project w-full border py-6 border-transparent px-4 md:px-12 relative z-20"
     >
       <div>
-        <h2 className="text-4xl md:text-5xl italic mb-10 md:mb-20">Personal Projects</h2>
-        {
-          projects.map((project) => (
-            <ProjectCard key={project._id} project={project}  />
-          ))
-        }
-        
+        <h2 className="text-4xl md:text-[6.5rem] tracking-tighter font-medium  mb-10 md:mb-20 uppercase pb-2 border-b-[2px] border-[#cac5b4]">
+          Projects
+        </h2>
+        {projects.map((project) => (
+          <ProjectCard key={project._id} project={project} />
+        ))}
       </div>
     </div>
   );

@@ -45,10 +45,10 @@ const NavBar = ({ scrollToAbout, scrollToProjects, scrollToContact }) => {
 
         <div className="hidden md:block w-[55%] px-32">
           <ul className="flex ml-10 gap-10 justify-between h-full items-center">
-            <li className="li opacity-0" onClick={scrollToAbout}>About</li>
-            <li className="li opacity-0" onClick={scrollToProjects}>Project</li>
-            <li className="li opacity-0">Resume</li>
-            <li className="li opacity-0" onClick={scrollToContact}>Contact</li>
+            <li className="li opacity-0 cursor-pointer" onClick={scrollToAbout}>About</li>
+            <li className="li opacity-0 cursor-pointer" onClick={scrollToProjects}>Project</li>
+            <li className="li opacity-0 cursor-pointer">Resume</li>
+            <li className="li opacity-0 cursor-pointer" onClick={scrollToContact}>Contact</li>
           </ul>
         </div>
       </div>

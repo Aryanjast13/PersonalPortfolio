@@ -21,7 +21,7 @@ const About = ({ scrollRef }) => {
       trigger: ".about", // your section selector
       pin: true, // pin the trigger element
       start: "top top", // when section top hits viewport top
-      end: "+=1119px", // how long it stays pinned (e.g., one viewport height)
+      end: "+=1300px", // how long it stays pinned (e.g., one viewport height)
       pinSpacing: false, // add spacing so layout doesn’t jump
       // scrub: true, // uncomment if you want scrubbed animations tied to scroll
       markers: false,// uncomment for debugging
@@ -31,13 +31,18 @@ const About = ({ scrollRef }) => {
     })
 
   return (
-    <section ref={scrollRef} className="about w-full pb-15 md:pb-40 px-4  md:px-12 relative z-10">
-      <h2 className="text-4xl md:text-7xl pt-3 md:py-6">About Me</h2>
+    <section
+      ref={scrollRef}
+      className="about w-full pb-15 md:pb-40 px-4  md:px-12 relative z-10"
+    >
+      <h2 className="text-4xl md:text-[6.5rem] tracking-tighter font-medium pt-3 md:pt-6 pb-2 uppercase  border-b-[2px] border-[#cac5b4]">
+        About
+      </h2>
       <div className="flex flex-col md:flex-row mt-2 md:mt-16 ">
         <div className="w-full md:w-1/2  p-4">
           <p className="text-lg md:text-xl mb-2">
-            <span className="text-xl md:text-2xl italic"> Hey there! </span> I'm Aryan, a
-            full-stack web developer who loves building functional,
+            <span className="text-xl md:text-2xl italic"> Hey there! </span> I'm
+            Aryan, a full-stack web developer who loves building functional,
             problem-solving apps that do more than just look good — they work
             seamlessly.
           </p>
@@ -54,8 +59,10 @@ const About = ({ scrollRef }) => {
             learning faster, and making ideas real — we'll get along great.
           </p>
         </div>
-        <div className="w-full md:w-1/2 md:pl-20 pt-5 ">
-          <h3 className="text-3xl md:ml-10 italic font-medium ">Skills</h3>
+        <div className="w-full md:w-1/2 md:pl-20  ">
+          <h3 className="text-[3.5rem] md:ml-10 uppercase font-medium ">
+            Skills
+          </h3>
 
           <div className="overflow-x-auto ml-2 md:pl-10  mt-6">
             <table className="table-auto w-full">
@@ -74,8 +81,10 @@ const About = ({ scrollRef }) => {
         </div>
       </div>
       <div className="w-full mt-5 md:mt-0 ">
-        <h3 className="text-4xl italic font-medium">Education</h3>
-        <p className="text-xl md:text-2xl mt-2 md:mt-6 pl-6 md:pl-0">Bacherlors of Computer Applications</p>
+        <h3 className="text-[3.5rem] uppercase font-medium leading-none">Education</h3>
+        <p className="text-xl md:text-2xl mt-2 md:mt-6 pl-6 md:pl-0">
+          Bacherlors of Computer Applications
+        </p>
         <div className=" text-base md:text-lg flex gap-12 mt-2 pl-6 md:pl-0">
           <span>Kurukshetra University</span>
           <span>2021-2024</span>

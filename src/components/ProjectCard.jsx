@@ -2,7 +2,7 @@ const ProjectCard = ({project}) => {
   return (
     <div className="flex flex-col md:flex-row justify-between mb-16 bg-[#eee8d9] rounded-lg">
       <div className="w-full md:w-[50%] flex flex-col justify-between pl-4 pb-5 md:pb-0">
-        <h4 className="text-3xl mb-2 md:mb-0 mt-4">{project.title}</h4>
+        <h3 className="text-3xl mb-2 md:mb-0 mt-4">{project.title}</h3>
         <div className=" mb-10">
           <p className=" text-lg leading-6  md:text-xl">{project.description}</p>
           <ul className="mt-4 flex gap-2 flex-wrap ">
