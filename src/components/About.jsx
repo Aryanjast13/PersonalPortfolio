@@ -1,3 +1,7 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 const skillData = [
   { category: "Frontend", skills: ["React", "Next.js", "Tailwind CSS"] },
@@ -10,8 +14,24 @@ const skillData = [
 ];
 
 const About = ({ scrollRef }) => {
+   gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    ScrollTrigger.create({
+      trigger: ".about", // your section selector
+      pin: true, // pin the trigger element
+      start: "top top", // when section top hits viewport top
+      end: "+=1119px", // how long it stays pinned (e.g., one viewport height)
+      pinSpacing: false, // add spacing so layout doesn’t jump
+      // scrub: true, // uncomment if you want scrubbed animations tied to scroll
+      markers: false,// uncomment for debugging
+      anticipatePin: 1,
+    });
+      
+    })
+
   return (
-    <section ref={scrollRef} className="about w-full pb-15 md:pb-40 px-4  md:px-12">
+    <section ref={scrollRef} className="about w-full pb-15 md:pb-40 px-4  md:px-12 relative z-10">
       <h2 className="text-4xl md:text-7xl pt-3 md:py-6">About Me</h2>
       <div className="flex flex-col md:flex-row mt-2 md:mt-16 ">
         <div className="w-full md:w-1/2  p-4">
